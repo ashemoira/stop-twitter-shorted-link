@@ -1,6 +1,8 @@
 document.addEventListener('click', (e) => {
     if (e.target.closest('a') == null) {
         return
+    } else if (e.target.closest('a').href.includes('https://twitter.com/')) {
+        return
     }
 
     e.preventDefault()
