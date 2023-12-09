@@ -6,5 +6,8 @@ document.addEventListener('click', (e) => {
     }
 
     e.preventDefault()
-    window.confirm("画像のリンク先に移動しますか？" + "\r\n" + e.target.closest('a').ariaLabel + "\r\n" + "URL: " + e.target.closest('a').href)
+    let confirmText = "画像のリンク先に移動しますか？" + "\r\n" + e.target.closest('a').ariaLabel + "\r\n" + "URL: " + e.target.closest('a').href
+    if (window.confirm(confirmText)) {
+        location.href = e.target.closest('a').href
+    }
 }, false);
