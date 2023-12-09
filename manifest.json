@@ -1,0 +1,25 @@
+{
+  "name": "STSL",
+  "description": "stop twitter shorted link",
+  "version": "1.0.0",
+  "manifest_version": 3,
+  "permissions": ["activeTab", "scripting"],
+  "action": {
+    "default_icon": "src/img/twitter16.png"
+  },
+  "icons": {
+    "16": "src/img/twitter16.png",
+    "48": "src/img/twitter48.png",
+    "128": "src/img/twitter128.png"
+  },
+  "content_scripts": [
+    {
+      "js": [
+        "src/js/stop_site_transition.js"
+      ],
+      "matches": [
+        "https://twitter.com/*"
+      ]
+    }
+  ]
+}
